@@ -188,7 +188,7 @@ into the pipeline of the proxy server. The rotating_keymaster and rotating_encry
 to the configuration of the proxy server, and the file /etc/swift/rotating_keymaster.conf which contains the following configuration directives::
 
     [rotating_keymaster]
-    auth_endpoint = http://<keystone-IP>:5000/v3
+    auth_endpoint = http://<keystone-IP>/identity/v3
     api_class = swiftkeyrotate.keyrotate_key_manager.KeyrotateKeyManager
 
 where the keystone-IP placeholder is replaced by the proper value according to the installation.
