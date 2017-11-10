@@ -18,7 +18,7 @@
 DIR_DEVSTACK=/opt/devstack
 SWIFT_IP=192.168.50.12
 SERVICES_IP=192.168.50.11
-OS_BRANCH=master
+OS_BRANCH=stable/pike
 
 # Dependencies
 sudo apt -y update

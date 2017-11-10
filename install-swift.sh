@@ -122,7 +122,7 @@ sudo apt autoremove -y --purge python-pip
 
 # Clone swift repo
 cd ~
-git clone -b stable/ocata https://github.com/openstack/swift.git
+git clone -b stable/pike https://github.com/openstack/swift.git
 cd -
 
 # Install requirements
@@ -271,7 +271,7 @@ cd -
 # in lots of places.
 sed -i "/^sudo mkfs/s/sdb/sdc/" ~/bin/resetswift
 
-# Create key in barbican using proxy user (for kms_keymaster
+# Create key in barbican using proxy user (for kms_keymaster)
 #source ~/openrc.proxy
 #ORDER_HREF=`openstack secret order create --name swift_root_secret --payload-content-type="application/octet-stream" --algorithm aes --bit-length 256 key -f value -c 'Order href'`
 #SECRET_HREF=`openstack secret order get -f value -c 'Secret href' "${ORDER_HREF}"`

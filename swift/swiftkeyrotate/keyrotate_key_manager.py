@@ -18,7 +18,6 @@ from oslo_log import log as logging
 from castellan.common import exception
 from castellan.key_manager.barbican_key_manager import BarbicanKeyManager
 from barbicanclient import exceptions as barbican_exceptions
-from castellan.i18n import _LE
 
 LOG = logging.getLogger(__name__)
 LIST_LIMIT = 10
@@ -108,5 +107,5 @@ class KeyrotateKeyManager(BarbicanKeyManager):
         except (barbican_exceptions.HTTPAuthError,
                 barbican_exceptions.HTTPClientError,
                 barbican_exceptions.HTTPServerError) as e:
-            LOG.error(_LE("Error listing keys: %s"), e)
+            LOG.error("Error listing keys: %s", e)
             raise exception.KeyManagerError(reason=e)
